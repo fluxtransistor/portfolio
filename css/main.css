@@ -1,24 +1,86 @@
 p {
-  font-family: 'SF Mono', 'Courier New', serif;
-}
-.window {
-  margin: 80px auto;
-  display: block;
-  width: 640px;
-  height: 480px;
-  background-color: #eaeaea;
-  border-radius: 13px;
-  box-shadow: 0 0 20px 1px #00000044;
-  border: 1px solid gray;
+  color: white;
+  font-family: -apple-system, Helvetica, sans-serif;
 }
 
-.window-bar {
-  height: 40px;
+.code {
+  font-family: Inconsolata, 'Roboto Mono', 'PT Mono', 'Andale Mono',  Menlo, 'Lucida Sans Typewriter', monospace;
+}
+
+.code span {
+  font-weight: bold;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: perspective(1000px) rotateX(-30deg) translateX(calc(-100vw - 50%)) rotateY(-25deg) rotateZ(18deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(0deg) translateX(0vw) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+body {
+  background-image: url('../img/pexels-lachlan-ross-5967940.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#window {
+  margin: 40px auto;
+  width: 640px;
+  height: 480px;
+  background-color: #ffffff00;
+  border-radius: 13px;
+  box-shadow: 0 0 20px 1px #00000044;
+  border: 1pt solid #0000008f;
+  display: flex;
+  flex-flow: column;
+  transform-style: preserve-3d;
+  animation: slide-in 1.5s cubic-bezier(0.25,0.25,0.5,0.995);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+#window-bar {
+  padding-left: 12px;
+  padding-right: 12px;
+  display: flex;
+  align-items: center;
   width: auto;
   background-color: #ffffff;
   border-radius: 12px 12px 0 0;
+  border-bottom: 0.5pt solid #bbbbbb;
+  flex: 0 1 40px;
 }
 
-.window-body{
-  margin: 15px;
+#window-body{
+  background-color: #00000045;
+  border-radius: 0 0 12px 12px;
+  padding-left: 15px;
+  flex: auto;
+}
+
+.window-button {
+  margin-left: 4px;
+  margin-right: 4px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+#window-button-close {
+  background-color: #FC4748;
+}
+
+#window-button-minimize {
+  background-color: #FEB025;
+}
+
+#window-button-maximize {
+  background-color: #2AC533;
 }
