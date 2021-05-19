@@ -12,6 +12,10 @@ p {
   font-weight: bold;
 }
 
+#photo-attribution {
+  color: #00000054;
+}
+
 @keyframes slide-in {
     0% {
         transform: perspective(1000px) rotateX(-30deg) translateX(calc(-100vw - 50%)) rotateY(-25deg) rotateZ(18deg);
@@ -37,7 +41,7 @@ body {
   height: 480px;
   background-color: #ffffff00;
   border-radius: 13px;
-  box-shadow: 0 0 20px 1px #00000044;
+  box-shadow: 0 0 40px 5px #00000064;
   border: 1pt solid #0000008f;
   display: flex;
   flex-flow: column;
