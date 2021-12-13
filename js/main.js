@@ -2,7 +2,7 @@ async function type() {
   var text =
    ["$ whoami","","",
     "Hi, I'm Lukáš!","",
-    "This is a placeholder for some hopefully interesting stuff."
+    "This page is empty, because I haven't yet gotten around to updating it."
    ];
   document.getElementById("terminal-text").innerHTML = "";
   await sleep(1200);
