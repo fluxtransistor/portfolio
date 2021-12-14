@@ -11,7 +11,7 @@ async function type() {
       document.getElementById("terminal-text").innerHTML += "<br/>";
     } else {
       for (var j = 0; j < text[i].length; j++) {
-        await sleep(100);
+        await sleep(50);
         document.getElementById("terminal-text").innerHTML += text[i][j];
       }
     }
